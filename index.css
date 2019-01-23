@@ -1,0 +1,83 @@
+/**
+ * Copyright: Copyright (C) 2018 sitb.software,All Rights Reserved
+ * author: yangyao(873241789@qq.com)
+ * data: 2018/8/1
+ */
+body, html, p {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url("image/background.jpg") no-repeat center;
+    background-size: cover;
+}
+
+main header {
+    position: absolute;
+    top: -150px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 200px;
+    text-align: center;
+}
+
+/*logo*/
+main header img {
+    width: 80px;
+    height: auto;
+}
+
+/*公司名*/
+main header p {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 12px 0 20px;
+}
+
+/*按钮*/
+main header a {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 12px 70px;
+    font-size: 15px;
+    background: rgba(209, 0, 0, 1);
+    color: #fff;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .1);
+    transition: background .5s ease-in-out;
+}
+
+main header a:hover {
+    text-decoration: underline;
+    transition: background .5s ease-in-out;
+    background: rgba(148, 5, 5, 1);
+}
+
+.message {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+    color: rgba(183, 183, 183, 0.7);
+}
+
+/* 跳转到浏览器下载提示 */
+.tipsContainer {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.tipsContainerModel {
+    background-image: url("image/browserTips.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}

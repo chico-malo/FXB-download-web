@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>福薪宝-下载</title>
+    <meta id="eqMobileViewport" name="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<script src="./utils/checkBrowser.js"></script>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            // orientationchange 事件是在用户水平或者垂直翻转设备（即方向发生变化）时触发的事件。
+            // onresize 事件会在窗口或框架被调整大小时发生。
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                window.clientWidth = docEl.clientWidth;
+                if (!window.clientWidth) return;
+                docEl.style.fontSize = 40 * (window.clientWidth / 640) + 'px';
+                window.base = 40 * (window.clientWidth / 640);
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+<body>
+<main>
+    <header>
+        <img src="image/logo.png">
+        <p>福薪宝</p>
+        <a href="http://fl.shangfudata.com/Storage/data/app/android/fuxinbao.apk">立即下载</a>
+    </header>
+</main>
+<p class="message">理财，就在弹指之间</p>
+<div class="tipsContainer tipsContainerModel"
+     id="tipsContainer"
+></div>
+<script>
+    window.onload = function () {
+        var tipsContainer = document.getElementById('tipsContainer');
+        if (isWeChat()) {
+            console.log('true');
+            tipsContainer.style.display = 'block';
+        }
+    }
+</script>
+</body>
+</html>
