@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <script src="./utils/checkBrowser.js"></script>
+<script src="./utils/checkModel.js"></script>
 <script type="text/javascript">
     (function (doc, win) {
         var docEl = doc.documentElement,
@@ -43,6 +44,9 @@
         if (isWeChat()) {
             console.log('true');
             tipsContainer.style.display = 'block';
+        }
+        if (isPhone()) {
+            alert('目前不支持，苹果端下载');
         }
     }
 </script>
